@@ -65,6 +65,36 @@ public class DsaToolkit {
         }
     }
 
-    //stack....
+    
+    // ====== Stack (array) ======
+    static class StackArr {
+        int[] a; 
+        int top=-1;
+        StackArr(int cap){
+             a=new int[cap];
+         }
+        public void push(int x){
+             if(top+1==a.length) {
+                 System.out.println("Stack Overflow");
+                  return;
+                } 
+                a[++top]=x;
+            }
+        public int pop(){
+             if(top==-1) {
+                 System.out.println("Stack Empty");
+                  return Integer.MIN_VALUE; 
+                } 
+                return a[top--];
+             }
+        public int peek(){ 
+            if(top==-1)
+             return Integer.MIN_VALUE;
+              return a[top];
+             }
+        public boolean isEmpty(){
+             return top==-1; 
+            }
+    }
 
     
