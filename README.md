@@ -101,5 +101,3 @@ The main purpose of this project is to provide a single platform where students 
 MCA Student
 
 ---
-
-⭐ If you find this project useful, consider giving the repository a star!
