@@ -97,4 +97,100 @@ public class DsaToolkit {
             }
     }
 
+    // ====== Queue (circular array) ======
+    static class CircularQueue{
+        int[] a; int head=0, tail=0, size=0;
+        CircularQueue(int cap){ 
+             a=new int[cap]; }
+        public void offer(int x){ 
+            if(size==a.length){
+                 System.out.println("Queue Full"); 
+                 return;
+                } 
+                a[tail]=x; 
+                tail=(tail+1)%a.length;
+                 size++;
+                 }
+        public int poll(){
+             if(size==0){
+                 System.out.println("Queue Empty");
+                  return Integer.MIN_VALUE;
+                } 
+                int v=a[head]; 
+                head=(head+1)%a.length;
+                 size--; 
+                 return v; }
+        public int peek(){
+             if(size==0) return Integer.MIN_VALUE; 
+             return a[head];
+             }
+    }
+
+    // ====== Binary Search Tree ======
+    static class BST{
+        class Node{ int val; Node left,right; Node(int v){val=v;} }
+        Node root;
+        public void insert(int v){
+             root = insertRec(root,v);
+             }
+        private Node insertRec(Node node,int v){
+             if(node==null) 
+                return new Node(v);
+             if(v<node.val) 
+                node.left=insertRec(node.left,v);
+             else 
+                node.right=insertRec(node.right,v); 
+            return node; 
+        }
+        public boolean search(int v){
+             return searchRec(root,v); 
+            }
+        private boolean searchRec(Node node,int v){
+             if(node==null) 
+                return false; 
+            if(node.val==v) 
+                return true; 
+            if(v<node.val) 
+                return searchRec(node.left,v); 
+            return searchRec(node.right,v);
+         }
+        public void inorder(){
+             inorderRec(root); 
+             System.out.println();
+             }
+        private void inorderRec(Node node){
+             if(node==null) 
+                return; 
+            inorderRec(node.left); 
+            System.out.print(node.val+" "); 
+            inorderRec(node.right);
+         }
+        public void delete(int v){
+             root = deleteRec(root,v);
+             }
+        private Node deleteRec(Node node,int v){
+             if(node==null) 
+                return null; 
+            if(v<node.val) 
+                node.left=deleteRec(node.left,v); 
+            else if(v>node.val) 
+                node.right=deleteRec(node.right,v);
+             else {
+            if(node.left==null) 
+                return node.right; 
+            else if(node.right==null) 
+                return node.left; 
+            node.val = minValue(node.right); 
+            node.right = deleteRec(node.right,node.val);
+        } 
+        return node; 
+    }
+        private int minValue(Node node){
+             Node cur=node; 
+             while(cur.left!=null)
+                 cur=cur.left; 
+                return cur.val; 
+            }
+    }
+
     
