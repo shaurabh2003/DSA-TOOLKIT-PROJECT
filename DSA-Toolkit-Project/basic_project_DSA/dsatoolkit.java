@@ -193,6 +193,52 @@ public class DsaToolkit {
             }
     }
 
-    
+     // ====== Graph (adj list) with BFS/DFS ======
+    static class Graph{
+        int n; 
+        ArrayList<Integer>[] adj;
+        Graph(int n){ 
+            this.n=n; 
+            adj = new ArrayList[n]; 
+            for(int i=0;i<n;i++) 
+                adj[i]=new ArrayList<>(); 
+            }
+        void addEdge(int u,int v){
+             adj[u].add(v);
+             adj[v].add(u);
+             }
+        void bfs(int start){
+    boolean[] vis = new boolean[n];
+   Queue<Integer> q = new java.util.LinkedList<>(); // fixed line 
+    q.add(start);
+    vis[start] = true;
+    System.out.print("BFS: ");
+    while(!q.isEmpty()){
+        int u = q.poll();
+        System.out.print(u+" ");
+        for(int w: adj[u]){
+            if(!vis[w]){
+                vis[w] = true;
+                q.add(w);
+            }
+        }
+    }
+    System.out.println();
+}
+
+        void dfs(int start){
+             boolean[] vis=new boolean[n]; 
+             System.out.print("DFS: ");
+             dfsRec(start,vis); 
+             System.out.println(); 
+        }
+        void dfsRec(int u, boolean[] vis){ 
+            vis[u]=true; 
+            System.out.print(u+" "); 
+            for(int w:adj[u]) 
+                if(!vis[w]) 
+                    dfsRec(w,vis);
+        }
+    }
 
     
