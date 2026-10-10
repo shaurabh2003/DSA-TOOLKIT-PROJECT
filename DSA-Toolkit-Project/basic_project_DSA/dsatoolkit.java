@@ -241,4 +241,78 @@ public class DsaToolkit {
         }
     }
 
+     // ====== Sorting Algorithms (utility) ======
+    static class Sorts{
+        static void bubble(int[] a){
+             int n=a.length;
+              for(int i=0;i<n-1;i++)
+                 for(int j=0;j<n-1-i;j++) 
+                if(a[j]>a[j+1])
+                     swap(a,j,j+1);
+        }
+        static void insertion(int[] a){
+             for(int i=1;i<a.length;i++){
+                 int key=a[i]; int j=i-1; 
+                 while(j>=0 && a[j]>key){
+                     a[j+1]=a[j]; j--;
+                     } 
+                     a[j+1]=key;
+                     } 
+         }
+        static void mergeSort(int[] a){
+             mergeSortRec(a,0,a.length-1); 
+        }
+        static void mergeSortRec(int[] a,int l,int r){
+             if(l>=r) 
+                return;
+             int m=(l+r)/2;
+              mergeSortRec(a,l,m); 
+              mergeSortRec(a,m+1,r); 
+              merge(a,l,m,r); 
+        }
+        static void merge(int[] a,int l,int m,int r){
+             int n1=m-l+1, n2=r-m;
+              int[] L=new int[n1];
+               int[] R=new int[n2];
+                for(int i=0;i<n1;i++) 
+                    L[i]=a[l+i]; 
+                for(int j=0;j<n2;j++) 
+                    R[j]=a[m+1+j]; 
+                int i=0,j=0,k=l;
+                 while(i<n1 && j<n2) 
+                    a[k++]= (L[i]<=R[j])?L[i++]:R[j++];
+                 while(i<n1) 
+                    a[k++]=L[i++];
+                 while(j<n2) 
+                    a[k++]=R[j++]; 
+        }
+        static void quickSort(int[] a){
+             quickRec(a,0,a.length-1);
+        }
+        static void quickRec(int[] a,int low,int high){ 
+            if(low<high){
+                 int p=partition(a,low,high);
+                  quickRec(a,low,p-1);
+                   quickRec(a,p+1,high);
+                }
+        }
+        static int partition(int[] a,int l,int h){ 
+            int pivot=a[h];
+             int i=l-1;
+              for(int j=l;j<h;j++){
+                 if(a[j]<=pivot){
+                     i++; 
+                     swap(a,i,j);
+                     } 
+                    } 
+                    swap(a,i+1,h); 
+                    return i+1; 
+        }
+        static void swap(int[] a,int i,int j){
+             int t=a[i];
+                 a[i]=a[j];
+                 a[j]=t; 
+        }
+    }
+
     
