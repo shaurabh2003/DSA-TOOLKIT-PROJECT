@@ -315,4 +315,58 @@ public class DsaToolkit {
         }
     }
 
+      // ====== Small demo / menu ======
+    public static void main(String[] args){
+        while(true){
+            System.out.println("\n--- DSA Toolkit Menu ---");
+            System.out.println("1) LinkedList demo");
+            System.out.println("2) Stack demo");
+            System.out.println("3) Queue demo");
+            System.out.println("4) BST demo");
+            System.out.println("5) Graph demo (BFS/DFS)");
+            System.out.println("6) Sorting demo");
+            System.out.println("0) Exit");
+            System.out.print("Choice: "); 
+            int ch = Integer.parseInt(sc.nextLine());
+            if(ch==0) {
+                 System.out.println("Bye"); break; 
+                }
+            switch(ch){
+                case 1: linkedListDemo(); break;
+                case 2: stackDemo(); break;
+                case 3: queueDemo(); break;
+                case 4: bstDemo(); break;
+                case 5: graphDemo(); break;
+                case 6: sortingDemo(); break;
+                default: System.out.println("Invalid");
+            }
+        }
+    }
+
+    static void linkedListDemo(){
+         LinkedList ll = new LinkedList();
+          System.out.println("Adding 10,20,30"); 
+          ll.addLast(10);
+           ll.addLast(20);
+            ll.addLast(30);
+             ll.display();
+              System.out.println("addFirst(5)");
+               ll.addFirst(5);
+                ll.display();
+                 System.out.println("removeFirst -> " + ll.removeFirst());
+                  ll.display(); 
+                  System.out.println("reverse:");
+                   ll.reverse();
+                    ll.display();  
+                    System.out.println("Size of link list :- "+  ll.size());
+                 }
+
+    static void stackDemo(){ 
+        StackArr s = new StackArr(5);
+         s.push(10); 
+         s.push(20);
+         s.push(30);
+        System.out.println("pop -> "+s.pop()); 
+        System.out.println("peek -> "+s.peek()); 
+    }
     
