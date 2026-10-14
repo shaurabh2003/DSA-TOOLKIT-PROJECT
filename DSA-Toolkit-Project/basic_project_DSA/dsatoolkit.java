@@ -369,4 +369,58 @@ public class DsaToolkit {
         System.out.println("pop -> "+s.pop()); 
         System.out.println("peek -> "+s.peek()); 
     }
+
+     static void queueDemo(){ 
+        CircularQueue q = new CircularQueue(5); 
+        q.offer(1); 
+        q.offer(2); 
+        q.offer(3); 
+        System.out.println("poll -> "+q.poll());
+        System.out.println("peek -> "+q.peek());
+     }
+
+    static void bstDemo(){
+         BST t = new BST();
+          int[] vals={50,30,70,20,40,60,80}; 
+          for(int v:vals) 
+            t.insert(v); 
+         System.out.print("Inorder: "); 
+         t.inorder();
+         System.out.println("Search 60: " + t.search(60)); 
+         System.out.println("Delete 70");
+         t.delete(70);
+         System.out.print("Inorder after delete: "); 
+         t.inorder(); 
+    }
+
+    static void graphDemo(){ 
+        Graph g = new Graph(6);
+         g.addEdge(0,1); 
+         g.addEdge(0,2); 
+         g.addEdge(1,3); 
+         g.addEdge(2,4); 
+         g.addEdge(3,5); 
+         g.bfs(0); 
+         g.dfs(0);
+    }
+
+    static void sortingDemo(){
+         int[] a = {5,2,9,1,5,6}; 
+         System.out.println("Original: "+Arrays.toString(a));
+          int[] b=a.clone();
+           Sorts.bubble(b);
+            System.out.println("Bubble: "+Arrays.toString(b));
+             b=a.clone();
+              Sorts.insertion(b);
+               System.out.println("Insertion: "+Arrays.toString(b)); 
+                b=a.clone();
+                 Sorts.mergeSort(b); 
+                  System.out.println("Merge: "+Arrays.toString(b));
+                   b=a.clone(); 
+                    Sorts.quickSort(b); 
+                     System.out.println("Quick: "+Arrays.toString(b)); 
+    }
+}
+
+
     
