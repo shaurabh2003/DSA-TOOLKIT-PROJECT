@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class DsaToolkit {
     static Scanner sc = new Scanner(System.in);
 
@@ -344,19 +345,19 @@ public class DsaToolkit {
     static void linkedListDemo(){
          LinkedList ll = new LinkedList();
           System.out.println("Adding 10,20,30"); 
-          ll.addLast(10);
-           ll.addLast(20);
-            ll.addLast(30);
-             ll.display();
-              System.out.println("addFirst(5)");
-               ll.addFirst(5);
+               ll.addLast(10);
+               ll.addLast(20);
+               ll.addLast(30);
+               ll.display();
+               System.out.println("addFirst(5)");
+                ll.addFirst(5);
                 ll.display();
-                 System.out.println("removeFirst -> " + ll.removeFirst());
-                  ll.display(); 
-                  System.out.println("reverse:");
-                   ll.reverse();
-                    ll.display();  
-                    System.out.println("Size of link list :- "+  ll.size());
+                System.out.println("removeFirst -> " + ll.removeFirst());
+                ll.display(); 
+                System.out.println("reverse:");
+                ll.reverse();
+                ll.display();  
+                System.out.println("Size of link list :- "+  ll.size());
                  }
 
     static void stackDemo(){ 
