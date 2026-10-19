@@ -1,3 +1,11 @@
+# DSA-TOOLKIT-PROJECT
+# DSA Toolkit
+
+### From Learning DSA to Solving Problems
+
+DSA Toolkit is a Java-based project designed to help students learn and practice **Data Structures and Algorithms** through simple, interactive programs.
+
+The project provides implementations of commonly used DSA concepts in one place, making it easier to understand how different data structures and algorithms work.
 
 ## 🚀 Features
 
