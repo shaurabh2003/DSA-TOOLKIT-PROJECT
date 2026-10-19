@@ -1,3 +1,7 @@
+import java.util.*;
+
+public class DsaToolkit {
+    static Scanner sc = new Scanner(System.in);
 
     // ====== Singly Linked List ======
     static class LinkedList {
