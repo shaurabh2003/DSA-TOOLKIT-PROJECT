@@ -1,8 +1,6 @@
 import java.util.*;
-
 public class DsaToolkit {
     static Scanner sc = new Scanner(System.in);
-
     // ====== Singly Linked List ======
     static class LinkedList {
         class Node { 
@@ -97,6 +95,7 @@ public class DsaToolkit {
             }
     }
 
+    
      // ====== Queue (circular array) ======
     static class CircularQueue{
         int[] a; int head=0, tail=0, size=0;
