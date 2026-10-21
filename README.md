@@ -8,7 +8,6 @@ DSA Toolkit is a Java-based project designed to help students learn and practice
 The project provides implementations of commonly used DSA concepts in one place, making it easier to understand how different data structures and algorithms work.
 
 ## 🚀 Features
-
 - Arrays
 - Searching
 - Sorting
@@ -74,7 +73,6 @@ javac DsaToolkit.java
 ```bash
 java DsaToolkit
 ```
-
 ## 🎯 Purpose
 
 The main purpose of this project is to provide a single platform where students can:
@@ -99,5 +97,4 @@ The main purpose of this project is to provide a single platform where students 
 **Shaurabh Kumar**
 
 MCA Student
-
 ---
