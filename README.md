@@ -77,13 +77,16 @@ java DsaToolkit
 
 The main purpose of this project is to provide a single platform where students can:
 
+
 - Learn fundamental DSA concepts
 - Understand algorithm implementation
 - Practice coding problems
 - Improve problem-solving skills
 - Revise important DSA topics
 
+
 ## 🔮 Future Improvements
+
 
 - Add more DSA algorithms
 - Add a graphical user interface
@@ -92,9 +95,13 @@ The main purpose of this project is to provide a single platform where students 
 - Add time and space complexity for each algorithm
 - Add progress tracking
 
+
 ## 👨‍💻 Author
+
 
 **Shaurabh Kumar**
 
+
 MCA Student
+
 ---
