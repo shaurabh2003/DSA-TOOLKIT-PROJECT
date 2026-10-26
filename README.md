@@ -93,10 +93,6 @@ The main purpose of this project is to provide a single platform where students 
 - Add progress tracking
 ## 👨‍💻 Author
 
-
-**Shaurabh Kumar**
-
-
 MCA Student
 
 ---
