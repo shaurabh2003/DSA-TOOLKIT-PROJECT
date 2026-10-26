@@ -1,6 +1,7 @@
 import java.util.*;
 public class DsaToolkit {
     static Scanner sc = new Scanner(System.in);
+    
     // ====== Singly Linked List ======
     static class LinkedList {
         class Node { 
@@ -63,6 +64,7 @@ public class DsaToolkit {
              return size; 
         }
     }
+    
     // ====== Stack (array) ======
     static class StackArr {
         int[] a; 
@@ -93,6 +95,7 @@ public class DsaToolkit {
              return top==-1; 
             }
     }
+    
      // ====== Queue (circular array) ======
     static class CircularQueue{
         int[] a; int head=0, tail=0, size=0;
@@ -121,6 +124,7 @@ public class DsaToolkit {
              return a[head];
              }
     }
+    
     // ====== Binary Search Tree ======
     static class BST{
         class Node{ int val; Node left,right; Node(int v){val=v;} }
@@ -187,6 +191,7 @@ public class DsaToolkit {
                 return cur.val; 
             }
     }
+    
      // ====== Graph (adj list) with BFS/DFS ======
     static class Graph{
         int n; 
